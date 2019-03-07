@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zxx">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index,follow">
+
+    <title>Listing Hub - Listing & Directory Template | ThemezHub</title>
+
+    <!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	
+	<!-- Bootstrap Select Option css -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-select.min.css">
+	
+    <!-- Icons -->
+    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/plugins/themify-icons/css/themify-icons.css" rel="stylesheet">
+	<link href="assets/plugins/line-icons/css/line-font.css" rel="stylesheet">
+    
+    <!-- Animate -->
+    <link href="assets/plugins/animate/animate.css" rel="stylesheet">
+    
+    <!-- Bootsnav -->
+    <link href="assets/plugins/bootstrap/css/bootsnav.css" rel="stylesheet">
+	
+	<!-- Bootstrap Slider CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap-slider/slider.css">
+    
+    <!-- Custom style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/responsiveness.css" rel="stylesheet">
+	<link  type="text/css" rel="stylesheet" id="jssDefault" href="assets/css/colors/main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+	</head>
+        <style>
+        #mymap {
+          width: 100%;
+          height:100%;
+          background-color: grey;
+        }
+        </style>
+	<body>
+		<div class="wrapper">  
+			<!-- Start Navigation -->
+			<nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav">
+				<div class="container-fluid">        
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+						<i class="ti-align-left"></i>
+					</button>
+					
+					<!-- Start Header Navigation -->
+					<div class="navbar-header">
+<!--						<a class="navbar-brand" href="search-listing.html">-->
+<!--							<img src="assets/img/logo.png" class="logo logo-display" alt="">-->
+<!--                                                        <img src="assets/img/listing-hub-favicon.png" class="logo logo-display" alt="">-->
+<!--						</a>-->
+                                                <h2>Food First</h2>
+					</div>
+                                        
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="navbar-menu">
+                                            
+						<ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">						
+						</ul>
+						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+							<li class="no-pd dropdown">
+								<a class="addlist" id="showusername"></a>
+								<ul class="dropdown-menu animated navbar-left fadeOutUp">
+									<li><a href="edit-profile.html">Profile Settings</a></li>
+									<li><a href="index.html">Log Out</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>   
+			</nav>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			
+			
+			<!-- ================ Search listing With Filter Option ======================= -->
+			<section>
+				<div class="container-fluid">
+					<div class="col-md-6 col-sm-5">
+						
+						<!-- Filter Option -->
+						<div class="row">
+						
+							<div class="col-md-12 col-sm-12 no-padd">
+								<h3>Now Let's look for some restaurants!</h3>
+								<p>Search by keywords, preference, filters & others wants</p>
+							</div>
+							
+							<form class="form-verticle">
+							
+								<div class="row mrg-0 mrg-bot-15">                                                                    
+									<div class="col-md-6 col-sm-12">
+										<div class="range-slider">
+											<strong>Choose Rateing Score</strong><input id="ex6" type="text" class="span2" data-slider-max="5" data-slider-step="1" data-slider-value="[0]"/>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row mrg-0">
+									<div class="col-md-6 col-sm-6">
+										<input id="mysearch-input" type="text" class="form-control left-radius" placeholder="Keywords..">
+									</div>
+									
+									<div class="col-md-6 col-sm-6">
+										<select id="myCategory" class="selectpicker form-control" data-live-search="true">
+										  <option value="Normal">Normal</option>
+										  <option value="By Preference">By Preference</option>
+                                                                                  <option value="See most people like">See most people like</option>	
+										</select>
+									</div>
+								</div>
+								
+								<div class="row mrg-r-10 mrg-l-10">
+									
+									<div class="col-md-12">
+										<h5 class="mrg-bot-10">Filters</h5>
+									</div>
+									
+									<div class="col-md-4 col-sm-6">
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Indian Food">
+											<label for="select1"></label>
+											Indian Food
+										</span>
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Chinese">
+											<label for="select4"></label>
+											Chinese Food   
+										</span>
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Japanese">
+											<label for="select5"></label>
+											Japanese Food  
+										</span>
+									</div>
+                                                                        <div class="col-md-4 col-sm-6">
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="American">
+											<label for="select1"></label> 
+											American Food
+										</span>
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Korean">
+											<label for="select4"></label>
+											Korean Food   
+										</span>
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Italian">
+											<label for="select5"></label>
+											Italian Food  
+										</span>
+									</div>
+                                                                        <div class="col-md-4 col-sm-6">
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Thai">
+											<label for="select1"></label>
+											Thai Food
+										</span>
+										<span class="custom-checkbox d-block">
+											<input type="checkbox" name="myselect" value="Britain">
+											<label for="select4"></label>
+											Britain Food   
+										</span>
+									</div>
+								</div>
+								
+								<div class="row mrg-0">
+									<div class="col-md-12">
+										<a id="mysearch-btn" onclick="mySearch()" class="btn theme-btn" title="Submit Listing">Search Place</a>
+									</div>
+								</div>
+
+							</form>
+							
+						</div>
+						
+						<!-- All Listing -->
+						<div class="row mrg-bot-20">
+							<div class="col-md-12">
+								<h5 id = "resultNum"></h5>
+							</div>
+						</div>
+						
+						<div class="row" id="listResult">							
+						</div>
+						<!-- row -->
+						
+					</div>
+					<!-- /.col-md-5 -->
+					
+					<!-- Sidebar Map -->
+					<div class="col-md-6 col-sm-7">
+						<div class="side-full-map">
+<!--							<div id="home-map"></div>-->
+                                                        <div id="mymap"></div>
+                                                </div>						
+					</div>
+					
+				</div>
+			</section>
+			<!-- ================ End Search listing With Filter Option  ======================= -->
+			
+			<!-- ================ Start Footer ======================= -->
+
+			<!-- ================ End Footer Section ======================= -->
+			
+			<!-- ================== Login & Sign Up Window ================== -->
+   
+			<!-- ===================== End Login & Sign Up Window =========================== -->
+			<a id="back2Top" class="theme-bg" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+			
+			<!-- START JAVASCRIPT -->
+			<!-- Jquery js-->
+			<script src="assets/js/jquery.min.js"></script>
+<!--			<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+			<!-- Bootstrap js-->
+			<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+			
+			<!-- bootstrap Select js-->
+			<script src="assets/plugins/bootstrap/js/bootstrap-select.min.js"></script>
+			
+			<!-- Slick Slider js-->
+			<script src="assets/plugins/slick-slider/slick.js"></script>
+			
+			<!-- counter js-->
+			<script src="assets/plugins/jquery-counter/js/waypoints.min.js"></script>
+            <script src="assets/plugins/jquery-counter/js/jquery.counterup.min.js"></script>
+			
+			<!-- Bootsnav js-->
+			<script src="assets/plugins/bootstrap/js/bootsnav.js"></script>
+			<script src="assets/js/viewportchecker.js"></script>
+			
+			<!-- Bootstrap Slider Js -->
+			<script src="assets/plugins/bootstrap-slider/bootstrap-slider.js"></script>
+			
+<!--                        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGNyhS0wmLZERaJVcSSKEGxEU9X2p1nLY"></script>
+			<script type="text/javascript" src="assets/js/custom-maps.js"></script>-->
+<!--                        <script src="assets/js/gmap3.min.js"></script>-->
+			
+			<!-- Custom Js -->
+			<script src="assets/js/custom.js"></script>
+                        <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+                        <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+                        <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+                        <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+                        <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+                        <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+                        <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+                        <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+                        <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+                        <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+                        <script type="text/javascript" src="aws-sdk.js"></script>
+                        <script type="text/javascript" src="apigClient.js"></script>
+			
+			<script>
+				function openRightMenu() {
+					document.getElementById("rightMenu").style.display = "block";
+				}
+				function closeRightMenu() {
+					document.getElementById("rightMenu").style.display = "none";
+				}
+			</script>
+			
+			<script>
+                        
+			$("#ex6").slider({});
+                        $("body").on("click", ".sendtext", function (e) { //user click on remove text
+                                console.log("sendtext");                                 
+                                var rid = $(this).attr("value");
+                                console.log("sendrid:"+rid); 
+                                console.log("send user phone:"+userphone);
+                                if(userphone == " "||userphone == ""){
+                                    alert("You haven't set your phone number in your profile. Please set it first.");
+                                    return;              
+                                }
+                                console.log("have phone");
+                                var params = {
+                                };
+                                var body = {
+                                  // This is where you define the body of the request,
+                                  messages:[{
+                                              type:"string",
+                                              unstructured:{
+                                              keywords:rid,
+                                              searchtype:'sendtext',
+                                              phone:userphone
+                                            }
+                                           }]
+                                };
+                            var logbody = {
+                                  // This is where you define the body of the request,
+                                  messages:[{
+                                              type:"string",
+                                              unstructured:{
+                                              keywords:rid,
+                                              searchtype:'clicklog',
+                                              phone:''
+                                            }
+                                           }]
+                                };
+                            //apigClient = apigClientFactory.newClient();                          
+                            apigClient.ccprojectPost(params,logbody,{})
+                            .then(function(response){
+                                console.log(response);
+                                alert("Text send success, please wait for 1 or 2 miunutes");
+                            }).catch( function(error){
+                                console.log(error);
+                            });
+
+                            apigClient.ccprojectPost(params,body,{})
+                            .then(function(response){
+                              // Add success callback code here.
+                                console.log(response);
+                            }).catch( function(error){
+                                console.log(error);
+                            });
+                                console.log("sendend");
+                            
+                        })                                             
+			</script>
+                        <script>
+                        var totalprefer="";
+                        mainget();
+                        function showList(searchresult){
+                            console.log("showlist");
+                            size = searchresult.length;
+                            console.log("searchresultsize:"+size);
+                            var list ="";
+                            for(var i = 0;i <size;i++){
+                                
+                                rlocation = searchresult[i].location.address1+","+ searchresult[i].location.city;
+                                imageurl = searchresult[i].image_url;
+                                restaurantname = searchresult[i].name;
+                                rphone = searchresult[i].display_phone;
+                                rurl = searchresult[i].url;
+                                rid =  searchresult[i].id;
+                                rating = searchresult[i].rating;
+                                separator =",";
+                                recommend = restaurantname+separator+rlocation+separator+rphone;
+                                addMarker(searchresult[i].coordinates.latitude,searchresult[i].coordinates.longitude);
+                                
+                                list+='<div class="col-md-6 col-sm-12">'
+                                +'<div class="listing-shot grid-style">'
+                                +'<a target="_blank" href="'+rurl+'">'
+                                +'<div class="listing-shot-img">'
+                                +'<img src="'+imageurl+'" class="img-responsive" alt="">'
+                                +'</div>'
+                                +'<div class="listing-shot-caption">'
+                                +'<h4>'+restaurantname+'</h4>'
+                                +'<p class="listing-location">'+rlocation+'</p>'
+                                +'</div>'
+                                +'</a>'
+                                +'<div class="listing-shot-info">'
+                                +'<div class="row extra">'
+                                +'<div class="col-md-12">'
+                                +'<div class="listing-detail-info">'
+				+'<span><i class="fa fa-phone" aria-hidden="true"></i>'+rphone+'</span>'
+				+'<a href="#"class="sendtext" value="'+rid+'">Click to send it as a text</a>'
+                                +'</div>'
+                                +'</div>'
+                                +'</div>'
+                                +'</div>'
+                                +'<div class="listing-shot-info rating">'
+                                +'<div class="row extra">'
+                                +'<div class="col-md-7 col-sm-7 col-xs-6">'
+                                +'<h5>Score on Yelp: '+rating+'</h5>'
+                                +'</div>'
+                                +'</div>'
+                                +'</div>'
+                                +'</div>'
+                                +'</div>';
+                            }
+                            $("#listResult").append(list);
+                            console.log("showlistfinish");
+                        };
+
+                        
+                        function  GetQuery(){
+                            console.log("testGetQuery"); 
+                            var searchtype = document.getElementById("myCategory").value;
+                            var keywords = document.getElementById("mysearch-input").value;
+                            var separater =",";                            
+                            var selects = $("input[name='myselect']:checked").val([]);
+                            if(selects.length>0){                              
+                                 for(var i=0;i<selects.length;i++){
+                                    keywords = keywords+separater+selects[i].value;
+                                }
+                            }
+                            if(searchtype == "By Preference"){
+                                keywords = keywords+separater+totalprefer;
+                                
+                            }
+                            var rate  = $("#ex6").data('slider').getValue();
+                            keywords = keywords+separater+rate;
+                            console.log("keywords: "+keywords);  
+                            console.log("testGetQuery end"); 
+                            return keywords;
+                        }
+                        var accesskey;
+                        var secretkey;
+                        var sessiontoken;
+                        var username;
+                        var apigClient;
+                        var userphone;
+                        
+                        function mainget(){
+                            console.log("main get start");
+                            accesskey=getCookie("accesskey");
+                            secretkey = getCookie("secretkey");
+                            sessiontoken = getCookie("sessiontoken");
+                            username = getCookie("username");
+                            
+                            console.log("username:"+username);
+//                            console.log("accesskey:"+accesskey);
+//                            console.log("secretkey:"+secretkey);
+//                            console.log("sessiontoken:"+sessiontoken);
+                            console.log("Apigateway Athuentication Success");
+                            document.getElementById('showusername').innerHTML=username;
+                            //var testusername ="wz11311";                          
+                            var mparams = {
+                                };
+                            var muserbody = {
+                              // This is where you define the body of the request,
+                              messages:[{
+                                          type:"get",
+                                          unstructured:{
+                                          username:username,
+                                          fullname:'',
+                                          prefer:'',
+                                          email:'',
+                                          phone:'',
+                                          address:'',
+                                          zip:''
+                                        }
+                                       }]
+                            };     
+                            apigClient = apigClientFactory.newClient(
+                            {
+                                accessKey: accesskey,
+                                secretKey: secretkey,
+                                sessionToken: sessiontoken,
+                                region:'us-east-1'
+                             }        
+                            );   
+                            apigClient.ccprojectuserPost(mparams, muserbody, {})
+                            .then(function(response){
+                              // Add success callback code here.
+
+                                console.log("getuserinfo");
+                                console.log(response);
+                                var preferlist = response.data.messages[0].unstructured.prefer;
+                                userphone = response.data.messages[0].unstructured.phone;
+                                console.log("userphone:"+userphone);
+                                var preferstr ="";
+                                var separator =" ";
+                                for(var i =0; i<preferlist.length;i++){
+                                    
+                                    preferstr=preferstr+separator+preferlist[i];
+                                    
+                                }
+                                totalprefer=preferstr;
+                            }).catch( function(error){
+                              console.log(error);
+                            });
+                           console.log("main get end"); 
+                        }
+                        function mySearch() {
+                            console.log("This is my Search");
+                            deleteMarkers();
+                            //apigClient = apigClientFactory.newClient();
+                            var msearchtype = document.getElementById("myCategory").value;
+                            if(msearchtype == "See most people like"){
+                                var myparams = {
+                                };
+                                var mybody = {
+                                  // This is where you define the body of the request,
+                                  messages:[{
+                                              type:"string",
+                                              unstructured:{
+                                              keywords:"",
+                                              searchtype:"logquery",
+                                              phone:''
+                                            }
+                                           }]
+                                };                    
+                                apigClient.ccprojectPost(myparams,mybody, {})
+                                .then(function(response){
+                                  // Add success callback code here.
+                                    console.log(response);
+                                    var msearchlist = response.data;
+                                    console.log("see log results");
+                                    document.getElementById('listResult').innerHTML = "";
+                                    showList(msearchlist);
+                                    
+                                }).catch( function(error){
+                                  console.log(error);
+                                });                     
+                                return;
+        
+                            }
+                            
+                            
+                            console.log("start real search");
+                            var searchkeywords = GetQuery();
+                            console.log("searchkeywords:"+searchkeywords);
+                            
+                                var params = {
+                                };
+                                var body = {
+                                  // This is where you define the body of the request,
+                                  messages:[{
+                                              type:"string",
+                                              unstructured:{
+                                              keywords:searchkeywords,
+                                              searchtype:'normal',
+                                              phone:'9175584478'
+                                            }
+                                           }]
+                                };  
+                                
+                            
+                            apigClient.ccprojectPost(params, body, {})
+                            .then(function(response){
+                              // Add success callback code here.
+                                console.log(response);
+                                //size = response.data.length; 
+                                var searchlist = response.data;
+                                //console.log(searchlist);
+                                document.getElementById('listResult').innerHTML = "";
+                                showList(searchlist);
+                                
+                                
+                                
+
+                            }).catch( function(error){
+                              console.log(error);
+                            }); 
+
+
+                            console.log("This is my Search finish");
+                            
+                        } 
+                        
+                        function setCookie(c_name,value,expiredays){
+                            var exdate=new Date();
+                            exdate.setDate(exdate.getDate()+expiredays);
+                            document.cookie=c_name+ "=" +escape(value)+
+                            ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+                        }
+                        
+                        
+                        function getCookie(c_name)
+                            {
+                            if (document.cookie.length>0)
+                              {
+                              c_start=document.cookie.indexOf(c_name + "=");
+                              if (c_start!=-1)
+                                { 
+                                c_start=c_start + c_name.length+1;
+                                c_end=document.cookie.indexOf(";",c_start);
+                                if (c_end==-1) c_end=document.cookie.length;
+                                return unescape(document.cookie.substring(c_start,c_end));
+                                } 
+                              }
+                            return "";
+                        }
+                        
+                        </script>
+                        <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGNyhS0wmLZERaJVcSSKEGxEU9X2p1nLY&callback=initMap">
+                        </script>                        
+                        <script>
+                        var map;
+                        var markers = [];
+                        function initMap() {
+                          var uluru = {lat: 40.712775, lng: -74.005973};
+                          map = new google.maps.Map(document.getElementById('mymap'), {
+                            zoom: 13,
+                            center: uluru
+                          });
+
+                        }
+                        function addMarker(lat,lon){
+//                            console.log("This is addMarker");
+                            var myCenter = new google.maps.LatLng(lat,lon);
+                            var marker = new google.maps.Marker({position:myCenter});
+                            marker.setMap(map);
+                            marker.addListener('click', function() {
+                             console.log(marker.getPosition());
+                            map.setCenter(marker.getPosition())
+                          });
+                            markers.push(marker);
+//                            console.log("This is addMarker end");
+                        }
+
+                        // Sets the map on all markers in the array.
+                        function setMapOnAll(map) {
+                          for (var i = 0; i < markers.length; i++) {
+                            markers[i].setMap(map);
+                          }
+                        }
+
+                        // Removes the markers from the map, but keeps them in the array.
+                        function clearMarkers() {
+                          setMapOnAll(null);
+                        }
+
+                        // Shows any markers currently in the array.
+                        function showMarkers() {
+                          setMapOnAll(map);
+                        }
+
+                        // Deletes all markers in the array by removing references to them.
+                        function deleteMarkers() {
+                          clearMarkers();
+                          markers = [];
+                        }
+
+                      </script>
+		</div>
+	</body>
+</html>
